@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+	/*xx {} the xx is to change the text properties etc in xx*/
+
+	/*lato from google font and back up is sans-serif (by default) will choose either arial or selvetica*/
+body {
+	font-family: 'Lato', sans-serif;
+	line-height: 1.5;
+	/*margin creates invisible barrier*/
+	margin: 0;
+}
+
+header {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-align: center;
+	color: white;
+	/*inspect on website then go color and choose hexadecimal value*/
+	background-color: #ffb403;
+	background-image:url(../images/header-bg.jpg);
+	background-size: cover;
+	background-position: center;
+	/*padding pushes out the original background*/
+	padding: 30px;
+	margin-bottom: 30px;
+}
+
+header a {
+	color: white;
+	text-decoration: none;
+}
+
+h1 {
+	/*font weight value from 100 to 900*/
+	font-weight: 300;
+	color: rgba(255,255,255,0.3);
+}
+
+/*when want to use class name, use . before the name of class*/
+.container {
+	/*can put this for visualizing -> border: 1px solid red;*/
+	width: 1000px;
+	/*0 auto represents margin top bottom 0 and left right auto*/
+	margin: 0 auto;
+}
+
+.recipes {
+	width: 66.66%;
+	float: left;
+}
+
+.sidebar {
+	width: 33.33%;
+	float: right;
+	background-color: orange;
+	padding: 20px;
+}
+
+article {
+width: 48%;
+float: left;
+margin-right: 2%;
+}
+
+article img {
+	width: 100%;
+}
+
+footer {
+	/*clear is to tell that there is floaters ontop it -> to remain it at where it should be*/
+	clear: both;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: grey;
+	padding: 30px;
+}
+
+ul {
+	paddding: 0;
+}
+
+/*if just li {} then ALL listings will change, we only want the ul li(s)*/
+/*can put footer li if only want footer listing change*/
+ul li {
+	/*to make the listings in one line*/
+	display: inline;
+	margin: 5px;
+}
+
+/*when hit 1000px it will override some stuff (make window smaller to see)*/
+@media (max-width: 1000px) {
+	.sidebar {
+		display: none;
+	}
+
+	.container, .recipes {
+		width: 100%;
+	}
+}
+
+@media (max-width: 600px) {
+	article {
+		width: 96%;
+		margin: 0 2%;
+	}
+}
